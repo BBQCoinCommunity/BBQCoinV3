@@ -21,10 +21,10 @@ transactions and blocks. Additionally, a JSONRPC port can be opened, which
 defaults to port `59332` for mainnet nodes. It is strongly recommended to not
 expose RPC ports to the public internet.
 
-| Function | mainnet | 
-| :------- | ------: |
-| P2P      |   19323 |
-| RPC      |   59332 |
+| Function | mainnet | testnet |
+| :------- | ------: | ------: |
+| P2P      |   19323 |   19333 |
+| RPC      |   59332 |   19332 |
 
 ## Ongoing development
 
