@@ -512,8 +512,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/BBQCoin-Community/BBQCoin>";
-    const std::string URL_WEBSITE = "<https://github.com/BBQCoin-Community/BBQCoin>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/BBQCoinCommunity/BBQCoinV3>";
+    const std::string URL_WEBSITE = "<https://github.com/BBQCoinCommunity/BBQCoinV3>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2013, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +

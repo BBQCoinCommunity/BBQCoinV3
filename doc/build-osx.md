@@ -28,7 +28,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 1.  Clone the bbqcoin source code and cd into `bbqcoin`
 
-        git clone https://github.com/BBQCoin-Community/BBQCoin
+        git clone https://github.com/BBQCoinCommunity/BBQCoinV3
         cd bbqcoin
 
 2.  Build BBQCoin:

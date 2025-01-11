@@ -5,7 +5,7 @@ of the latest changes on NixOS.
 
 Clone and enter the repo:
 
-    $ git clone https://github.com/BBQCoin-Community/BBQCoin
+    $ git clone https://github.com/BBQCoinCommunity/BBQCoinV3
     $ cd bbqcoin
 
 Enter the `nix-shell` environment with all the Dogecoin dependencies present:

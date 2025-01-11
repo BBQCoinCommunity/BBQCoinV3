@@ -8,7 +8,7 @@ bbqcoind on archlinux:
 
 ```sh
 pacman -S git base-devel boost libevent python db
-git clone https://github.com/BBQCoin-Community/BBQCoin.git
+git clone https://github.com/BBQCoinCommunity/BBQCoinV3.git
 cd bbqcoin/
 ./autogen.sh
 ./configure --without-gui --without-miniupnpc

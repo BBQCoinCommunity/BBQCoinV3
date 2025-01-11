@@ -33,7 +33,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/bbqcoin-core/gitian.sigs.git
     git clone https://github.com/bbqcoin-core/bbqcoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/BBQCoin-Community/BBQCoin.git
+    git clone https://github.com/BBQCoinCommunity/BBQCoinV3.git
 
 ### BBQCoin maintainers/release engineers, update version in sources
 
@@ -249,7 +249,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 - Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the bbqcoin.com Github repo
 
-- Create a [new GitHub release](https://github.com/BBQCoin-Community/BBQCoin/releases/new) with a link to the archived release notes.
+- Create a [new GitHub release](https://github.com/BBQCoinCommunity/BBQCoinV3/releases/new) with a link to the archived release notes.
 
 - Update bbqcoin.com version - Langerhans to do
 
