@@ -1,0 +1,11 @@
+[Protocol]
+exec=luckycoin-qt '%u'
+protocol=luckycoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
