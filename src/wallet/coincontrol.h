@@ -7,7 +7,7 @@
 #define BITCOIN_WALLET_COINCONTROL_H
 
 #include "primitives/transaction.h"
-#include "luckycoin-fees.h"
+#include "bbqcoin-fees.h"
 
 /** Coin Control Features. */
 class CCoinControl

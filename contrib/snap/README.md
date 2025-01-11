@@ -18,7 +18,7 @@ snap install \*.snap --devmode
 ### To Push to Snapcraft
 ```
 snapcraft login
-snapcraft register luckycoin-core
+snapcraft register bbqcoin-core
 snapcraft push \*.snap --release=edge
-sudo snap install luckycoin-core --channel=edge
+sudo snap install bbqcoin-core --channel=edge
 ```

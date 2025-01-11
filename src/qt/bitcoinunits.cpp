@@ -19,10 +19,8 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
     unitlist.append(BTC);
-    unitlist.append(kBTC);
-    unitlist.append(MBTC);
-    //unitlist.append(mBTC);
-    //unitlist.append(uBTC);
+    unitlist.append(mBTC);
+    unitlist.append(uBTC);
     return unitlist;
 }
 
@@ -30,12 +28,10 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case MBTC:
-    case kBTC:
     case BTC:
-        return true;
     case mBTC:
     case uBTC:
+        return true;
     default:
         return false;
     }
@@ -45,11 +41,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("MLKY");
-    case kBTC: return QString("kLKY");
-    case BTC: return QString("LKY");
-    case mBTC: return QString("mLKY");
-    case uBTC: return QString::fromUtf8("μLKY");
+    case BTC: return QString("BQC");
+    case mBTC: return QString("mBQC");
+    case uBTC: return QString::fromUtf8("uBQC");
     default: return QString("???");
     }
 }
@@ -58,11 +52,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("Mega-LuckyCoin (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case kBTC: return QString("Kilo-LuckyCoin (1" THIN_SP_UTF8 "000)");
-    case BTC: return QString("LuckyCoin");
-    case mBTC: return QString("Milli-LuckyCoin (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-LuckyCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("BBQCoin");
+    case mBTC: return QString("Milli-BBQCoin (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-BBQCoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -71,8 +63,6 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case MBTC: return 100000000000000;
-    case kBTC: return 100000000000;
     case BTC:  return 100000000;
     case mBTC: return 100000;
     case uBTC: return 100;
@@ -84,8 +74,6 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case MBTC: return 14;
-    case kBTC: return 11;
     case BTC: return 8;
     case mBTC: return 5;
     case uBTC: return 2;

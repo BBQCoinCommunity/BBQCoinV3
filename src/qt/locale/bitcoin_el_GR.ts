@@ -211,7 +211,7 @@
     </message>
     <message>
         <source>Send coins to a Dogecoin address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση luckycoin</translation>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση bbqcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -286,8 +286,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and luckycoin: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις luckycoin: )</translation>
+        <source>Request payments (generates QR codes and bbqcoin: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις bbqcoin: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -298,8 +298,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a luckycoin: URI or payment request</source>
-        <translation>Άνοιγμα luckycoin: URI αίτησης πληρωμής</translation>
+        <source>Open a bbqcoin: URI or payment request</source>
+        <translation>Άνοιγμα bbqcoin: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

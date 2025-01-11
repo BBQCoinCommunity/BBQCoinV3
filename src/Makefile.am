@@ -66,11 +66,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += luckycoind
+  bin_PROGRAMS += bbqcoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += luckycoin-cli luckycoin-tx
+  bin_PROGRAMS += bbqcoin-cli bbqcoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -99,10 +99,10 @@ BITCOIN_CORE_H = \
   core_io.h \
   core_memusage.h \
   cuckoocache.h \
-  luckycoin.cpp \
-  luckycoin.h \
-  luckycoin-fees.cpp \
-  luckycoin-fees.h \
+  bbqcoin.cpp \
+  bbqcoin.h \
+  bbqcoin-fees.cpp \
+  bbqcoin-fees.h \
   httprpc.h \
   httpserver.h \
   indirectmap.h \
@@ -372,16 +372,16 @@ nodist_libdogecoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-luckycoind_SOURCES = bitcoind.cpp
-luckycoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-luckycoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-luckycoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bbqcoind_SOURCES = bitcoind.cpp
+bbqcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+bbqcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bbqcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-luckycoind_SOURCES += bitcoind-res.rc
+bbqcoind_SOURCES += bitcoind-res.rc
 endif
 
-luckycoind_LDADD = \
+bbqcoind_LDADD = \
   $(LIBDOGECOIN_SERVER) \
   $(LIBDOGECOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -394,38 +394,38 @@ luckycoind_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-luckycoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+bbqcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-luckycoin_cli_SOURCES = bitcoin-cli.cpp
-luckycoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-luckycoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-luckycoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bbqcoin_cli_SOURCES = bitcoin-cli.cpp
+bbqcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+bbqcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bbqcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-luckycoin_cli_SOURCES += bitcoin-cli-res.rc
+bbqcoin_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-luckycoin_cli_LDADD = \
+bbqcoin_cli_LDADD = \
   $(LIBDOGECOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBDOGECOIN_UTIL) \
   $(LIBDOGECOIN_CRYPTO)
 
-luckycoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+bbqcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-luckycoin_tx_SOURCES = bitcoin-tx.cpp
-luckycoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-luckycoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-luckycoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bbqcoin_tx_SOURCES = bitcoin-tx.cpp
+bbqcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+bbqcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bbqcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-luckycoin_tx_SOURCES += bitcoin-tx-res.rc
+bbqcoin_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-luckycoin_tx_LDADD = \
+bbqcoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBDOGECOIN_COMMON) \
   $(LIBDOGECOIN_UTIL) \
@@ -433,7 +433,7 @@ luckycoin_tx_LDADD = \
   $(LIBDOGECOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-luckycoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+bbqcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

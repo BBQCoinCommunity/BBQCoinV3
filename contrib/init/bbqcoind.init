@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  bbqcoind The bbqcoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: bbqcoind
+# processname: bbqcoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/bbqcoind, see below
+if [ -f /etc/sysconfig/bbqcoind ]; then
+        . /etc/sysconfig/bbqcoind
+fi
+
+RETVAL=0
+
+prog=bbqcoind
+# you can override the lockfile via bbqcoind_LOCKFILE in /etc/sysconfig/bbqcoind
+lockfile=${bbqcoind_LOCKFILE-/var/lock/subsys/bbqcoind}
+
+# bbqcoind defaults to /usr/bin/bbqcoind, override with bbqcoind_BIN
+bbqcoind=${bbqcoind_BIN-/usr/bin/bbqcoind}
+
+# bbqcoind opts default to -disablewallet, override with bbqcoind_OPTS
+bbqcoind_opts=${bbqcoind_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bbqcoind $bbqcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

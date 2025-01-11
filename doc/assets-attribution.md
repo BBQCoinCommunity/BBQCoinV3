@@ -1,4 +1,4 @@
-The following is a list of assets used in the luckycoin source and their proper attribution.
+The following is a list of assets used in the bbqcoin source and their proper attribution.
 
 [Typicons/Stephen Hutchings](http://typicons.com)
 -----------------------
@@ -40,7 +40,7 @@ Other
 
 ### Info
 * Designer: Jonas Schnelli, Bitboy, Stephen Hutchings, Marco Falke
-* LuckyCoin Icon: Based on the original Dogecoin logo from Christine Ricks
+* BBQCoin Icon: Based on the original Dogecoin logo from Christine Ricks
 * Network connection icon: Inspired by flow-merge.svg from Stephen Hutchings
 * Some icons are based on Stephan Hutchings Typicons
 * License: MIT
@@ -48,9 +48,9 @@ Other
 ### Assets Used
     src/qt/res/icons/about.png
     src/qt/res/icons/about_qt.png,
-    src/qt/res/icons/luckycoin.icns
-    src/qt/res/icons/luckycoin.ico,
-    src/qt/res/icons/luckycoin.png
+    src/qt/res/icons/bbqcoin.icns
+    src/qt/res/icons/bbqcoin.ico,
+    src/qt/res/icons/bbqcoin.png
     src/qt/res/icons/clock*.png,
     src/qt/res/icons/connect*.png
     src/qt/res/icons/eye_minus.png,

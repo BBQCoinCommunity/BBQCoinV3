@@ -435,7 +435,7 @@
         <translation>Лента инструменти за раздели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and luckycoin: URIs)</source>
+        <source>Request payments (generates QR codes and bbqcoin: URIs)</source>
         <translation>Изискване на плащания (генериране на QR кодове и Доджкойн: URIs)</translation>
     </message>
     <message>
@@ -447,7 +447,7 @@
         <translation>Показване на списъка с използваните адреси за получаване и етикети.</translation>
     </message>
     <message>
-        <source>Open a luckycoin: URI or payment request</source>
+        <source>Open a bbqcoin: URI or payment request</source>
         <translation>Отворете Доджкойн: URI или заявка за плащане</translation>
     </message>
     <message>
@@ -1016,7 +1016,7 @@
         <translation>Скрий</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the luckycoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bbqcoin network, as detailed below.</source>
         <translation>Възможно е последните транзакции все още да не са видими, вследствие баланса на Вашия портфейл може да е временно неточен. Информацията ще е точна, когато Вашия портфейл приключи синхронизацията с Доджкойн мрежата. За подробности вижте долу.  </translation>
     </message>
     <message>
@@ -1635,7 +1635,7 @@ p, li { white-space: pre-wrap; }
         <translation>Възникна грешка при назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start luckycoin: click-to-pay handler</source>
+        <source>Cannot start bbqcoin: click-to-pay handler</source>
         <translation>Доджкойн не можe да стартира: манипулатор кликни-да-платиш</translation>
     </message>
     <message>
@@ -2613,7 +2613,7 @@ p, li { white-space: pre-wrap; }
         <translation>Ако персонализираната такса е настроена за 1000 монети, а за транзакцията са необходими 250 байта, тогава  &quot;за килобайт&quot; се плащат само 250 монети такса, докато &quot;общо най-малко&quot; се плащат 1000 монети. За транзакции по-големи от килобайт, и двата метода плащат за килобайт.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for luckycoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bbqcoin transactions than the network can process.</source>
         <translation>Плащане само на минималната такса не е проблем, стига свободното място в блоковете да е повече от обема на транзакциитете. Обаче имайте предвид, че това може да доведе до транзакцията никога да не бъде потвърдена, ако има повече Доджкойн транзакции, отколкото мрежата може да обработи.</translation>
     </message>
     <message>
@@ -2740,7 +2740,7 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Изваждане на таксата от сумата</translation>
     </message>
     <message>
-        <source>A message that was attached to the luckycoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
+        <source>A message that was attached to the bbqcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
         <translation>Беше добавено съобщение към Доджкойн: URI, което ще бъде запазено с транзакцията за Ваша справка. Бележка: Това съобщение няма да бъде изпратено чрез Доджкойн мрежата.</translation>
     </message>
     <message>

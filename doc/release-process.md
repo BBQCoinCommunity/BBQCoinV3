@@ -2,9 +2,9 @@
 
 Before every release candidate:
 
-- Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/luckycoin/luckycoin/blob/master/doc/translation_process.md#synchronising-translations).
+- Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/bbqcoin/bbqcoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-- Update manpages, see [gen-manpages.sh](https://github.com/luckycoin/luckycoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+- Update manpages, see [gen-manpages.sh](https://github.com/bbqcoin/bbqcoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -20,7 +20,7 @@ Before every minor and major release:
 
 Before every major release:
 
-- Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/luckycoin/luckycoin/pull/7415) for an example.
+- Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/bbqcoin/bbqcoin/pull/7415) for an example.
 - Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 
 ### First time / New builders
@@ -30,12 +30,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/luckycoin-core/gitian.sigs.git
-    git clone https://github.com/luckycoin-core/luckycoin-detached-sigs.git
+    git clone https://github.com/bbqcoin-core/gitian.sigs.git
+    git clone https://github.com/bbqcoin-core/bbqcoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/LuckyCoinProj/luckycoinV3.git
+    git clone https://github.com/BBQCoin-Community/BBQCoin.git
 
-### LuckyCoin maintainers/release engineers, update version in sources
+### BBQCoin maintainers/release engineers, update version in sources
 
 Update the following:
 
@@ -74,7 +74,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./luckycoin
+    pushd ./bbqcoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -108,7 +108,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../luckycoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../bbqcoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -116,7 +116,7 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url luckycoin=/path/to/luckycoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url bbqcoin=/path/to/bbqcoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
@@ -124,42 +124,42 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 ### Build and sign Dogecoin Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit luckycoin=v${VERSION} ../luckycoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../luckycoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/luckycoin-*.tar.gz build/out/src/luckycoin-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit bbqcoin=v${VERSION} ../bbqcoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../bbqcoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/bbqcoin-*.tar.gz build/out/src/bbqcoin-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit luckycoin=v${VERSION} ../luckycoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../luckycoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/luckycoin-*-win-unsigned.tar.gz inputs/luckycoin-win-unsigned.tar.gz
-    mv build/out/luckycoin-*.zip build/out/luckycoin-*.exe ../
+    ./bin/gbuild --memory 3000 --commit bbqcoin=v${VERSION} ../bbqcoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../bbqcoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/bbqcoin-*-win-unsigned.tar.gz inputs/bbqcoin-win-unsigned.tar.gz
+    mv build/out/bbqcoin-*.zip build/out/bbqcoin-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit luckycoin=v${VERSION} ../luckycoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../luckycoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/luckycoin-*-osx-unsigned.tar.gz inputs/luckycoin-osx-unsigned.tar.gz
-    mv build/out/luckycoin-*.tar.gz build/out/luckycoin-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit bbqcoin=v${VERSION} ../bbqcoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../bbqcoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/bbqcoin-*-osx-unsigned.tar.gz inputs/bbqcoin-osx-unsigned.tar.gz
+    mv build/out/bbqcoin-*.tar.gz build/out/bbqcoin-*.dmg ../
     popd
 
 Build output expected:
 
-1. source tarball (`luckycoin-${VERSION}.tar.gz`)
-2. linux 32-bit and 64-bit dist tarballs (`luckycoin-${VERSION}-linux[32|64].tar.gz`)
-3. windows 32-bit and 64-bit unsigned installers and dist zips (`luckycoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `luckycoin-${VERSION}-win[32|64].zip`)
-4. OS X unsigned installer and dist tarball (`luckycoin-${VERSION}-osx-unsigned.dmg`, `luckycoin-${VERSION}-osx64.tar.gz`)
+1. source tarball (`bbqcoin-${VERSION}.tar.gz`)
+2. linux 32-bit and 64-bit dist tarballs (`bbqcoin-${VERSION}-linux[32|64].tar.gz`)
+3. windows 32-bit and 64-bit unsigned installers and dist zips (`bbqcoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `bbqcoin-${VERSION}-win[32|64].zip`)
+4. OS X unsigned installer and dist tarball (`bbqcoin-${VERSION}-osx-unsigned.dmg`, `bbqcoin-${VERSION}-osx64.tar.gz`)
 5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import luckycoin/contrib/gitian-keys/*.pgp
+    gpg --import bbqcoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../luckycoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../luckycoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../luckycoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../bbqcoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../bbqcoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../bbqcoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -177,25 +177,25 @@ Commit your signature to gitian.sigs:
 Wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [luckycoin-detached-sigs](https://github.com/doge/luckycoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [bbqcoin-detached-sigs](https://github.com/doge/bbqcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../luckycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../luckycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../luckycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/luckycoin-osx-signed.dmg ../luckycoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../bbqcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../bbqcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../bbqcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/bbqcoin-osx-signed.dmg ../bbqcoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../luckycoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../luckycoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../luckycoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/luckycoin-*win64-setup.exe ../luckycoin-${VERSION}-win64-setup.exe
-    mv build/out/luckycoin-*win32-setup.exe ../luckycoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../bbqcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../bbqcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../bbqcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/bbqcoin-*win64-setup.exe ../bbqcoin-${VERSION}-win64-setup.exe
+    mv build/out/bbqcoin-*win32-setup.exe ../bbqcoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -218,24 +218,24 @@ sha256sum * > SHA256SUMS
 The list of files should be:
 
 ```
-luckycoin-${VERSION}-aarch64-linux-gnu.tar.gz
-luckycoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-luckycoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-luckycoin-${VERSION}-x86_64-linux-gnu.tar.gz
-luckycoin-${VERSION}-osx64.tar.gz
-luckycoin-${VERSION}-osx.dmg
-luckycoin-${VERSION}.tar.gz
-luckycoin-${VERSION}-win32-setup.exe
-luckycoin-${VERSION}-win32.zip
-luckycoin-${VERSION}-win64-setup.exe
-luckycoin-${VERSION}-win64.zip
+bbqcoin-${VERSION}-aarch64-linux-gnu.tar.gz
+bbqcoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+bbqcoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+bbqcoin-${VERSION}-x86_64-linux-gnu.tar.gz
+bbqcoin-${VERSION}-osx64.tar.gz
+bbqcoin-${VERSION}-osx.dmg
+bbqcoin-${VERSION}.tar.gz
+bbqcoin-${VERSION}-win32-setup.exe
+bbqcoin-${VERSION}-win32.zip
+bbqcoin-${VERSION}-win64-setup.exe
+bbqcoin-${VERSION}-win64.zip
 ```
 
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space _do not upload these to the luckycoin.com server, nor put them in the torrent_.
+space _do not upload these to the bbqcoin.com server, nor put them in the torrent_.
 
 - GPG-sign it, delete the unsigned file:
 
@@ -247,23 +247,23 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the luckycoin.com Github repo
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the bbqcoin.com Github repo
 
-- Create a [new GitHub release](https://github.com/LuckyCoinProj/luckycoinV3/releases/new) with a link to the archived release notes.
+- Create a [new GitHub release](https://github.com/BBQCoin-Community/BBQCoin/releases/new) with a link to the archived release notes.
 
-- Update luckycoin.com version - Langerhans to do
+- Update bbqcoin.com version - Langerhans to do
 
 - Announce the release:
 
-  - Release sticky on Dogecoin Forums: http://forum.luckycoin.com/forum/news-community/community-announcements
+  - Release sticky on Dogecoin Forums: http://forum.bbqcoin.com/forum/news-community/community-announcements
 
   - Dogecoin-development mailing list
 
-  - Twitter, reddit /r/luckycoin
+  - Twitter, reddit /r/bbqcoin
 
-  - Update title of #luckycoin on Freenode IRC
+  - Update title of #bbqcoin on Freenode IRC
 
-  - Announce on reddit /r/luckycoin, /r/luckycoindev
+  - Announce on reddit /r/bbqcoin, /r/bbqcoindev
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

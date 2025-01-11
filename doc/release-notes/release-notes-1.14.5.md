@@ -1,6 +1,6 @@
 Dogecoin Core version 1.14.5 is now available from:
 
-  <https://github.com/luckycoin/luckycoin/releases/tag/v1.14.5/>
+  <https://github.com/bbqcoin/bbqcoin/releases/tag/v1.14.5/>
 
 This is a new minor version release, including important security updates and
 changes to network policies. All Dogecoin Core users, miners, services, relay
@@ -8,13 +8,13 @@ operators and wallet users are strongly recommended to upgrade.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/luckycoin/luckycoin/issues>
+  <https://github.com/bbqcoin/bbqcoin/issues>
 
 To receive security and update notifications, please watch reddit or Twitter:
 
-  * https://www.reddit.com/r/luckycoindev/
+  * https://www.reddit.com/r/bbqcoindev/
   * @Dogecoin on Twitter for high priority announcements
-  * @luckycoin\_devs on Twitter for updates on development work
+  * @bbqcoin\_devs on Twitter for updates on development work
 
 Compatibility
 ==============
@@ -38,7 +38,7 @@ most Dogecoin Core users.
 
 This release addresses CVE-2021-3401 that opened potential remote code execution
 on QT (graphical user interface) wallets through malicious use of
-`luckycoin:` URIs.
+`bbqcoin:` URIs.
 
 **Dogecoin QT users are urged to please update their installations to this
 version immediately**, to prevent malicious actors from exploiting this

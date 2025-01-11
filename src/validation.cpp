@@ -13,8 +13,8 @@
 #include "consensus/consensus.h"
 #include "consensus/merkle.h"
 #include "consensus/validation.h"
-#include "luckycoin.h"
-#include "luckycoin-fees.h"
+#include "bbqcoin.h"
+#include "bbqcoin-fees.h"
 #include "hash.h"
 #include "init.h"
 #include "policy/fees.h"
@@ -51,7 +51,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "LuckyCoin cannot be compiled without assertions."
+# error "BBQCoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -98,7 +98,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "LuckyCoin Signed Message:\n";
+const std::string strMessageMagic = "BBQCoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1440,7 +1440,7 @@ bool CheckTxInputs(const CChainParams& params, const CTransaction& tx, CValidati
 
             // If prev is coinbase, check that it's matured
             if (coins->IsCoinBase()) {
-                // luckycoin: Switch maturity at digishield activation
+                // bbqcoin: Switch maturity at digishield activation
                 int nCoinbaseMaturity = params.GetConsensus(coins->nHeight).nCoinbaseMaturity;
                 if (nSpendHeight - coins->nHeight < nCoinbaseMaturity)
                     return state.Invalid(false,
@@ -1738,7 +1738,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("luckycoin-scriptch");
+    RenameThread("bbqcoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -1880,7 +1880,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes during their
     // initial block download.
-    // luckycoin: BIP30 has been active since inception
+    // bbqcoin: BIP30 has been active since inception
     bool fEnforceBIP30 = true;
 
     // Once BIP34 activated it was not possible to create new duplicate coinbases and thus other than starting
@@ -1914,7 +1914,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     }
 
     // BIP16 didn't become active until Apr 1 2012
-    // luckycoin: BIP16 has been enabled since inception
+    // bbqcoin: BIP16 has been enabled since inception
     bool fStrictPayToScriptHash = true;
 
     unsigned int flags = fStrictPayToScriptHash ? SCRIPT_VERIFY_P2SH : SCRIPT_VERIFY_NONE;

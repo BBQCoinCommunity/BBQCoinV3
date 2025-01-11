@@ -218,7 +218,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dogecoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 sekarang akan tertutup untuk menyelesaikan proses enkripsi. Ingatlah bahwa mengenkripsi dompetmu tidak dapat sepenuhnya melindungi dari pencurian luckycoin oleh malware yang menginfeksi komputer Anda.</translation>
+        <translation>%1 sekarang akan tertutup untuk menyelesaikan proses enkripsi. Ingatlah bahwa mengenkripsi dompetmu tidak dapat sepenuhnya melindungi dari pencurian bbqcoin oleh malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -299,8 +299,8 @@
         <translation>&amp;Terima Banget</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and luckycoin: URIs)</source>
-        <translation>Minta pembayaran (bikin kode QR dan luckycoin: URI)</translation>
+        <source>Request payments (generates QR codes and bbqcoin: URIs)</source>
+        <translation>Minta pembayaran (bikin kode QR dan bbqcoin: URI)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -415,8 +415,8 @@
         <translation>Buka &amp;URI</translation>
     </message>
     <message>
-        <source>Open a luckycoin: URI or payment request</source>
-        <translation>Buka URI luckycoin: atau permintaan pembayaran</translation>
+        <source>Open a bbqcoin: URI or payment request</source>
+        <translation>Buka URI bbqcoin: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1018,8 +1018,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the luckycoin network, as detailed below.</source>
-        <translation>Transaksi terakhir mungkin belum diperlihatkan, karena mungkin saja saldo dompet kamu salah. Informasi ini akan menjadi benar setelah dompetmu tersinkronisasi dengan jaringa luckycoin, seperti tertampil dibawah.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bbqcoin network, as detailed below.</source>
+        <translation>Transaksi terakhir mungkin belum diperlihatkan, karena mungkin saja saldo dompet kamu salah. Informasi ini akan menjadi benar setelah dompetmu tersinkronisasi dengan jaringa bbqcoin, seperti tertampil dibawah.</translation>
     </message>
     <message>
         <source>Attempting to spend dogecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1641,8 +1641,8 @@ p, li { white-space: pre-wrap; }
         <translation>Permintaan pembayaran gagal</translation>
     </message>
     <message>
-        <source>Cannot start luckycoin: click-to-pay handler</source>
-        <translation>Tidak bisa memulai luckycoin: penanganan ketuk-untuk-bayar</translation>
+        <source>Cannot start bbqcoin: click-to-pay handler</source>
+        <translation>Tidak bisa memulai bbqcoin: penanganan ketuk-untuk-bayar</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -2539,8 +2539,8 @@ p, li { white-space: pre-wrap; }
         <translation>Dust:</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for luckycoin transactions than the network can process.</source>
-        <translation>Boleh saja membayar hanya biaya minimum selama volume transaksi lebih sedikit daripada ruang di blok yang tersedia. Tetapi ketahuilah bahwa ini bisa menyebabkan transaksimu tidak pernah terkonfirmasi kalau permintaan untuk transaksi terus meningkat melebihi kapasitas jaringan luckycoin.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bbqcoin transactions than the network can process.</source>
+        <translation>Boleh saja membayar hanya biaya minimum selama volume transaksi lebih sedikit daripada ruang di blok yang tersedia. Tetapi ketahuilah bahwa ini bisa menyebabkan transaksimu tidak pernah terkonfirmasi kalau permintaan untuk transaksi terus meningkat melebihi kapasitas jaringan bbqcoin.</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -2735,7 +2735,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The fee will be deducted from the amount being sent. The recipient will receive less dogecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Biaya tersebut akan dipotong dari jumlah yang dikirimkan. Penerima akan menerima luckycoin lebih sedikit daripada yang kamu masukkan diisian jumlah. Jika beberapa penerima dipilih sekaligus, biayanya akan dibagi rata.</translation>
+        <translation>Biaya tersebut akan dipotong dari jumlah yang dikirimkan. Penerima akan menerima bbqcoin lebih sedikit daripada yang kamu masukkan diisian jumlah. Jika beberapa penerima dipilih sekaligus, biayanya akan dibagi rata.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2758,8 +2758,8 @@ p, li { white-space: pre-wrap; }
         <translation>Masukkan label untuk alamat ini agar dimasukan ke dalam daftar alamat yang pernah digunakan</translation>
     </message>
     <message>
-        <source>A message that was attached to the luckycoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
-        <translation>Pesan yang dilampirkan ke luckycoin: URI yang akan disimpan dengan transaksi sebagai referensi kamu. Catatan: Pesan ini tidak akan dikirim bersama dengan pembayaran melalui jaringan Dogecoin.</translation>
+        <source>A message that was attached to the bbqcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
+        <translation>Pesan yang dilampirkan ke bbqcoin: URI yang akan disimpan dengan transaksi sebagai referensi kamu. Catatan: Pesan ini tidak akan dikirim bersama dengan pembayaran melalui jaringan Dogecoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2804,7 +2804,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive dogecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Kamu bisa menandatangani pesan / perjanjian dengan alamat tujuan untuk membuktikan bahwa kamu dapat menerima luckycoin. Berhati-hatilah untuk tidak menandatangani apa pun yang samar atau acak, karena serangan phishing mungkin mencoba menipumy agar menyerahkan identitas. Tetap wasapada dan hanya tanda tangani pernyataan yang detail dan kamu pahami. </translation>
+        <translation>Kamu bisa menandatangani pesan / perjanjian dengan alamat tujuan untuk membuktikan bahwa kamu dapat menerima bbqcoin. Berhati-hatilah untuk tidak menandatangani apa pun yang samar atau acak, karena serangan phishing mungkin mencoba menipumy agar menyerahkan identitas. Tetap wasapada dan hanya tanda tangani pernyataan yang detail dan kamu pahami. </translation>
     </message>
     <message>
         <source>Choose previously used address</source>

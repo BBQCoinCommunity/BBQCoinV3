@@ -4,12 +4,12 @@
 **Test date:** 2022/07/15
 
 This example lists the steps necessary to setup and build a command line only
-luckycoind on archlinux:
+bbqcoind on archlinux:
 
 ```sh
 pacman -S git base-devel boost libevent python db
-git clone https://github.com/LuckyCoinProj/luckycoinV3.git
-cd luckycoin/
+git clone https://github.com/BBQCoin-Community/BBQCoin.git
+cd bbqcoin/
 ./autogen.sh
 ./configure --without-gui --without-miniupnpc
 make

@@ -1,5 +1,5 @@
 ---
-name: "luckycoin-dmg-signer"
+name: "bbqcoin-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/luckycoin/luckycoin-detached-sigs.git"
+- "url": "https://github.com/bbqcoin/bbqcoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "luckycoin-osx-unsigned.tar.gz"
+- "bbqcoin-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=luckycoin-osx-unsigned.tar.gz
-  SIGNED=luckycoin-osx-signed.dmg
+  UNSIGNED=bbqcoin-osx-unsigned.tar.gz
+  SIGNED=bbqcoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

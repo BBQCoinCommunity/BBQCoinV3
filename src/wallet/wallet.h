@@ -9,7 +9,7 @@
 
 #include "amount.h"
 #include "auxpow.h"
-#include "luckycoin-fees.h"
+#include "bbqcoin-fees.h"
 #include "streams.h"
 #include "tinyformat.h"
 #include "ui_interface.h"
@@ -70,7 +70,7 @@ static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100;
 
 //! minimum recommended increment for BIP 125 replacement txs
 /*
- * luckycoin: Scaled to 1/10th of the recommended transaction fee to make RBF
+ * bbqcoin: Scaled to 1/10th of the recommended transaction fee to make RBF
  * cheaper than CPFP. This reduces onchain pollution by encouraging transactions
  * to be replaced in the mempool, rather than be respent by another transaction
  * which then both would have to be mined, taking up block space and increasing
@@ -79,7 +79,7 @@ static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100;
  */
 static const CAmount WALLET_INCREMENTAL_RELAY_FEE = RECOMMENDED_MIN_TX_FEE / 10;
 /*
- * luckycoin: Creating change outputs at exactly the dustlimit is counter-
+ * bbqcoin: Creating change outputs at exactly the dustlimit is counter-
  * productive because it leaves no space to bump the fee up, so we make the
  * minimum change higher than the discard threshold.
  *
@@ -814,11 +814,11 @@ public:
      */
     static CAmount GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBytes, unsigned int nConfirmTarget, const CTxMemPool& pool, CAmount targetFee);
     /**
-     * LuckyCoin: Get a fee targetting a specific transaction speed.
+     * BBQCoin: Get a fee targetting a specific transaction speed.
      */
     CAmount GetDogecoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed);
     /**
-     * LuckyCoin: Get a fee targetting a specific transaction speed.
+     * BBQCoin: Get a fee targetting a specific transaction speed.
      */
     static CAmount GetDogecoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed, CAmount targetFee);
     /**

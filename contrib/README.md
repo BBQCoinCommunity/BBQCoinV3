@@ -13,7 +13,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the Dogecoin network. This means one can have an always-on luckycoind instance running, and another local luckycoind/luckycoin-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the Dogecoin network. This means one can have an always-on bbqcoind instance running, and another local bbqcoind/bbqcoin-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -22,8 +22,8 @@ Build Tools and Keys
 ---------------------
 
 ### [Debian](/contrib/debian) ###
-Contains files used to package luckycoind/luckycoin-qt
-for Debian-based Linux systems. If you compile luckycoind/luckycoin-qt yourself, there are some useful files here.
+Contains files used to package bbqcoind/bbqcoin-qt
+for Debian-based Linux systems. If you compile bbqcoind/bbqcoin-qt yourself, there are some useful files here.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
 Notes on getting Gitian builds up and running using KVM.
@@ -35,13 +35,13 @@ PGP keys used for signing Dogecoin Core [Gitian release](/doc/release-process.md
 Scripts and notes for Mac builds.
 
 ### [RPM](/contrib/rpm) ###
-RPM spec file for building luckycoin-core on RPM based distributions
+RPM spec file for building bbqcoin-core on RPM based distributions
 
 ### [Gitian-build](/contrib/gitian-build.sh) ###
 Script for running full Gitian builds.
 
 ### [Snap](/contrib/snap) ###
-snapcraft.yaml file for building and distributing luckycoin-core with Snapcraft.
+snapcraft.yaml file for building and distributing bbqcoin-core with Snapcraft.
 
 Test and Verify Tools
 ---------------------
@@ -50,4 +50,4 @@ Test and Verify Tools
 Utilities to generate test vectors for the data-driven Dogecoin tests.
 
 ### [Verify Binaries](/contrib/verifybinaries) ###
-This script attempts to download and verify the signature file SHA256SUMS.asc from luckycoin.com.
+This script attempts to download and verify the signature file SHA256SUMS.asc from bbqcoin.com.

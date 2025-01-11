@@ -258,8 +258,8 @@
         <translation>Thanh công cụ (toolbar)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and luckycoin: URIs)</source>
-        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ luckycoin: URLs)</translation>
+        <source>Request payments (generates QR codes and bbqcoin: URIs)</source>
+        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ bbqcoin: URLs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -270,8 +270,8 @@
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a luckycoin: URI or payment request</source>
-        <translation>Mở luckycoin:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a bbqcoin: URI or payment request</source>
+        <translation>Mở bbqcoin:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

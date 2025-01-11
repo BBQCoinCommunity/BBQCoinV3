@@ -1,0 +1,11 @@
+[Protocol]
+exec=bbqcoin-qt '%u'
+protocol=bbqcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

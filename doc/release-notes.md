@@ -1,6 +1,6 @@
-LuckyCoin Core version 1.14.6 is now available from:
+BBQCoin Core version 1.14.6 is now available from:
 
-  <https://github.com/luckycoin/luckycoin/releases/tag/v1.14.6/>
+  <https://github.com/bbqcoin/bbqcoin/releases/tag/v1.14.6/>
 
 This is a new minor version release, including important security updates and
 changes to network efficiency. All Dogecoin Core users - miners, services,
@@ -8,15 +8,15 @@ relay operators and wallet users - are strongly recommended to upgrade.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/luckycoin/luckycoin/issues>
+  <https://github.com/bbqcoin/bbqcoin/issues>
 
 To receive notifications about updates, subscribe to the release mailing list:
 
-  <https://sourceforge.net/projects/luckycoin/lists/luckycoin-releases>
+  <https://sourceforge.net/projects/bbqcoin/lists/bbqcoin-releases>
 
 Releases are also announced on reddit:
 
-  <https://www.reddit.com/r/luckycoindev/>
+  <https://www.reddit.com/r/bbqcoindev/>
 
 Compatibility
 ==============
@@ -113,7 +113,7 @@ addresses and return an error.
 Users can remove existing addnode records from the software by running:
 
 ```
-luckycoin-cli addnode <address> remove
+bbqcoin-cli addnode <address> remove
 ```
 
 Features
@@ -130,7 +130,7 @@ got lost.
 The method can be called with:
 
 ```
-luckycoin-cli liststucktransactions
+bbqcoin-cli liststucktransactions
 ```
 
 ### Add pruning configuration to the UI
@@ -167,7 +167,7 @@ and will automatically adapt to a maximum that the host OS allows.
 To change the maximum number of connections, run:
 
 ```
-luckycoin-cli setmaxconnections <desired_amount>
+bbqcoin-cli setmaxconnections <desired_amount>
 ```
 
 ### Improve the traffic graph in the UI
@@ -190,7 +190,7 @@ NOTE: rescanning the blockchain takes a lot of time.
 To use the rescan functionality, use:
 
 ```
-luckycoin-cli rescan <start_block>
+bbqcoin-cli rescan <start_block>
 ```
 
 It will inform of the state before and after when the process finishes:

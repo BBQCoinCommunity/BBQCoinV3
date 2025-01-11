@@ -376,7 +376,7 @@
     </message>
     <message>
         <source>Send coins to a Dogecoin address</source>
-        <translation>Enviar moedas para um endereço luckycoin</translation>
+        <translation>Enviar moedas para um endereço bbqcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -451,8 +451,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and luckycoin: URIs)</source>
-        <translation>Solicitar pagamentos (gerar códigos QR e luckycoin: URIs)</translation>
+        <source>Request payments (generates QR codes and bbqcoin: URIs)</source>
+        <translation>Solicitar pagamentos (gerar códigos QR e bbqcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -463,8 +463,8 @@
         <translation>Mostrar a lista de endereços de recebimento usados ​​e rótulos</translation>
     </message>
     <message>
-        <source>Open a luckycoin: URI or payment request</source>
-        <translation>Abrir um endereço luckycoin: URI ou cobrança</translation>
+        <source>Open a bbqcoin: URI or payment request</source>
+        <translation>Abrir um endereço bbqcoin: URI ou cobrança</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1034,7 +1034,7 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the luckycoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bbqcoin network, as detailed below.</source>
         <translation>Transações recentes podem não estar visíveis ainda, portanto o seu saldo pode estar incorreto. Esta informação será corrigida assim que sua carteira for sincronizada com a rede, como detalhado abaixo.</translation>
     </message>
     <message>
@@ -1657,8 +1657,8 @@ p, li { white-space: pre-wrap; }
         <translation>Erro no pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start luckycoin: click-to-pay handler</source>
-        <translation>Não foi possível iniciar luckycoin: manipulador click-to-pay</translation>
+        <source>Cannot start bbqcoin: click-to-pay handler</source>
+        <translation>Não foi possível iniciar bbqcoin: manipulador click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -2529,7 +2529,7 @@ p, li { white-space: pre-wrap; }
         <translation>pelo menos</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for luckycoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bbqcoin transactions than the network can process.</source>
         <translation>Pagando apenas a taxa mínima é bom, desde que haja pouco volume de transações. Mas esteja ciente de que isso pode acabar em uma transação nunca confirmanda uma vez que há mais demanda por transações do que a rede pode processar.</translation>
     </message>
     <message>
@@ -2810,8 +2810,8 @@ p, li { white-space: pre-wrap; }
         <translation>Digite um rótulo para este endereço para adicioná-lo no catálogo</translation>
     </message>
     <message>
-        <source>A message that was attached to the luckycoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
-        <translation>A mensagem que foi anexada ao luckycoin: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Dogecoin.</translation>
+        <source>A message that was attached to the bbqcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
+        <translation>A mensagem que foi anexada ao bbqcoin: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Dogecoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>

@@ -1,18 +1,18 @@
 <h1 align="center">
-<img src="https://pbs.twimg.com/media/GZhUfpHWwA8P4B_?format=png&name=small" data-canonical-src="https://pbs.twimg.com/media/GZhUfpHWwA8P4B_?format=png&name=small" width="250" height="250" alt="LuckyCoin"/>
+<img src="https://pbs.twimg.com/media/GZhUfpHWwA8P4B_?format=png&name=small" data-canonical-src="https://pbs.twimg.com/media/GZhUfpHWwA8P4B_?format=png&name=small" width="250" height="250" alt="BBQCoin"/>
 <br/><br/>
-LuckyCoin [LKY]
+BBQCoin [BQC]
 </h1>
 
 <div align="center">
 
-[![LuckyCoinBadge](https://img.shields.io/badge/LuckyCoin-Coin-blue)](https://luckycoinfoundation.org)
-[![MuchWow](https://img.shields.io/badge/OG-Coin-yellow.svg)](https://luckycoinfoundation.org)
+[![BBQCoinBadge](https://img.shields.io/badge/BBQCoin-Coin-blue)](https://bbqcoin.link)
+[![MuchWow](https://img.shields.io/badge/OG-Coin-yellow.svg)](https://bbqcoin.link)
 
 </div>
 
 ## What's New in V3.0.0?
-This release is an update aimed at modernizing the Luckycoin blockchain with AuxPow support for merged mining.
+This release is an update aimed at modernizing the BBQCoin blockchain with AuxPow support for merged mining.
 
 ## Features
 - **AuxPow Support**: Enables merged mining with other compatible blockchains.
@@ -23,7 +23,7 @@ This release is an update aimed at modernizing the Luckycoin blockchain with Aux
 - **Block Time**: 1 minute target
 - **Initial Reward**: 88 coins per block, halving every 2 months (100,000 blocks)
 - **Total Supply**: ~20 million coins
-- **Port**: 9917 (connection), 9918 (RPC)
+- **Port**: 19323 (connection), 59332 (RPC)
 - **Random Bonus Blocks**: Variable reward system as detailed below.
 
 ### Random Bonus Blocks
@@ -38,7 +38,7 @@ This release is an update aimed at modernizing the Luckycoin blockchain with Aux
 - 0.01% chance of 58x normal coins
 
 ## Official Resources
-Visit the [Luckycoin website](https://luckycoinfoundation.org) for more details, updates, and community engagement.
+Visit the [BBQCoin website](https://bbqcoin.link) for more details, updates, and community engagement.
 
 ## Development Process
 Developers should work on their own branches and submit pull requests when features or fixes are ready. The master branch is tested regularly but is not guaranteed to be stable. Feature branches are used for significant updates involving multiple contributors.

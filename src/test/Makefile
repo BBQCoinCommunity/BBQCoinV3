@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. luckycoin_test
+	$(MAKE) -C .. bbqcoin_test
 clean:
-	$(MAKE) -C .. luckycoin_test_clean
+	$(MAKE) -C .. bbqcoin_test_clean
 check:
-	$(MAKE) -C .. luckycoin_test_check
+	$(MAKE) -C .. bbqcoin_test_check

@@ -5,8 +5,8 @@ of the latest changes on NixOS.
 
 Clone and enter the repo:
 
-    $ git clone https://github.com/LuckyCoinProj/luckycoinV3
-    $ cd luckycoin
+    $ git clone https://github.com/BBQCoin-Community/BBQCoin
+    $ cd bbqcoin
 
 Enter the `nix-shell` environment with all the Dogecoin dependencies present:
 
@@ -20,4 +20,4 @@ Run the build steps with flags necessary for NixOS:
 
 Start the GUI!
 
-    $ ./src/qt/luckycoin-qt
+    $ ./src/qt/bbqcoin-qt

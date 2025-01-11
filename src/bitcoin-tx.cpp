@@ -54,10 +54,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || IsArgSet("-?") || IsArgSet("-h") || IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s luckycoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s bbqcoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  luckycoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded luckycoin transaction") + "\n" +
-              "  luckycoin-tx [options] -create [commands]   " + _("Create hex-encoded luckycoin transaction") + "\n" +
+              "  bbqcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded bbqcoin transaction") + "\n" +
+              "  bbqcoin-tx [options] -create [commands]   " + _("Create hex-encoded bbqcoin transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

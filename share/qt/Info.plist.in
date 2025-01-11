@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>luckycoin.icns</string>
+  <string>bbqcoin.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>LuckyCoin-Qt</string>
+  <string>BBQCoin-Qt</string>
 
   <key>CFBundleName</key>
-  <string>LuckyCoin-Qt</string>
+  <string>BBQCoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>com.luckycoin.LuckyCoin-Qt</string>
+  <string>com.bbqcoin.BBQCoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>com.luckycoin.LuckyCoinPayment</string>
+      <string>com.bbqcoin.BBQCoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>luckycoin</string>
+        <string>bbqcoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>com.luckycoin.paymentrequest</string>
+      <string>com.bbqcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>LuckyCoin payment request</string>
+      <string>BBQCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/luckycoin-paymentrequest</string>
+        <string>application/bbqcoin-paymentrequest</string>
         <key>public.filename-extension</key>
         <array>
-          <string>luckycoinpaymentrequest</string>
+          <string>bbqcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>com.luckycoin.paymentrequest</string>
+        <string>com.bbqcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

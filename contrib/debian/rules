@@ -1,9 +1,9 @@
 #!/usr/bin/make -f
 # -*- mode: makefile; coding: utf-8 -*-
 
-#DEB_MAKE_CHECK_TARGET = test_luckycoin
-#build/luckycoind::
-#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_luckycoin)
+#DEB_MAKE_CHECK_TARGET = test_bbqcoin
+#build/bbqcoind::
+#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_bbqcoin)
 
 %:
 	dh --with bash-completion $@

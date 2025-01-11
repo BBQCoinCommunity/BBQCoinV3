@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Send coins to a Dogecoin address</source>
-        <translation>Enviar monedas a una dirección luckycoin</translation>
+        <translation>Enviar monedas a una dirección bbqcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -206,8 +206,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and luckycoin: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and luckycoin: URls)</translation>
+        <source>Request payments (generates QR codes and bbqcoin: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and bbqcoin: URls)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -773,7 +773,7 @@
     </message>
     <message>
         <source>Dogecoin Core</source>
-        <translation>luckycoin core</translation>
+        <translation>bbqcoin core</translation>
     </message>
     <message>
         <source>Error loading block database</source>

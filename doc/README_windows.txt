@@ -11,7 +11,7 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run luckycoin-qt.exe.
+Unpack the files into a directory and run bbqcoin-qt.exe.
 
 Dogecoin Core is the original Dogecoin client and it builds the backbone of the network.
 However, it downloads and stores the entire history of Dogecoin transactions;
@@ -19,5 +19,5 @@ depending on the speed of your computer and network connection, the synchronizat
 process can take anywhere from a few hours to a day or more.
 
 See the Dogecoin wiki at:
-  https://www.reddit.com/r/luckycoin/wiki/dogecoincoreguide
+  https://www.reddit.com/r/bbqcoin/wiki/dogecoincoreguide
 for more help and information.

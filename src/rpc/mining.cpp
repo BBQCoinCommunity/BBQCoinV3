@@ -99,7 +99,7 @@ UniValue getnetworkhashps(const JSONRPCRequest& request)
 
 UniValue generateBlocks(boost::shared_ptr<CReserveScript> coinbaseScript, int nGenerate, uint64_t nMaxTries, bool keepScript, int nMineAuxPow)
 {
-    // luckycoin: Never mine witness tx
+    // bbqcoin: Never mine witness tx
     const bool fMineWitnessTx = false;
     static const int nInnerLoopCount = 0x10000;
     int nHeightStart = 0;
@@ -221,7 +221,7 @@ UniValue generatetoaddress(const JSONRPCRequest& request)
             "\nMine blocks immediately to a specified address (before the RPC call returns)\n"
             "\nArguments:\n"
             "1. nblocks      (numeric, required) How many blocks are generated immediately.\n"
-            "2. address      (string, required) The address to send the newly generated luckycoin to.\n"
+            "2. address      (string, required) The address to send the newly generated bbqcoin to.\n"
             "3. maxtries     (numeric, optional) How many iterations to try (default = 1000000).\n"
             "4. auxpow       (numeric, optional) If the block should include the auxpow header (default = 0).\n"
             "\nResult:\n"
@@ -353,7 +353,7 @@ std::string gbt_vb_name(const Consensus::DeploymentPos pos) {
 
 UniValue getblocktemplate(const JSONRPCRequest& request)
 {
-    // luckycoin: Never mine witness tx
+    // bbqcoin: Never mine witness tx
     const bool fMineWitnessTx = false;
     if (request.fHelp || request.params.size() > 1)
         throw runtime_error(
@@ -504,10 +504,10 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
 
     if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0)
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "LuckyCoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BBQCoin is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "LuckyCoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BBQCoin is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;
 
@@ -993,11 +993,11 @@ void AuxMiningCheck()
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
 
     if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0 && !Params().MineBlocksOnDemand()) // FIXME: Is it good? at L506 there is no `!Params().MineBlocksOnDemand()`
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "LuckyCoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BBQCoin is not connected!");
 
     if (IsInitialBlockDownload() && !Params().MineBlocksOnDemand()) // FIXME: Is it good? at L509 there is no `!Params().MineBlocksOnDemand()`
         throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD,
-                           "LuckyCoin is downloading blocks...");
+                           "BBQCoin is downloading blocks...");
 
     /* This should never fail, since the chain is already
        past the point of merge-mining start.  Check nevertheless.  */
@@ -1021,12 +1021,12 @@ static UniValue AuxMiningCreateBlock(const CScript& scriptPubKey)
     static std::map<CScriptID, CBlock*> curBlocks;
     static unsigned nExtraNonce = 0;
 
-    // luckycoin: Never mine witness tx
+    // bbqcoin: Never mine witness tx
     const bool fMineWitnessTx = false;
 
     /* Search for cached blocks with given scriptPubKey and assign it to pBlock
      * if we find a match. This allows for creating multiple aux templates with
-     * a single luckycoind instance, for example when a pool runs multiple sub-
+     * a single bbqcoind instance, for example when a pool runs multiple sub-
      * pools with different payout strategies.
      */
     CBlock* pblock = nullptr;
@@ -1189,7 +1189,7 @@ UniValue getauxblockbip22(const JSONRPCRequest& request)
         static unsigned nExtraNonce = 0;
 
         // Update block
-        // luckycoin: Never mine witness tx
+        // bbqcoin: Never mine witness tx
         const bool fMineWitnessTx = false;
         {
             LOCK(cs_main);

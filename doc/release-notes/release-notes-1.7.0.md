@@ -28,12 +28,12 @@ Following in the footsteps of Bitcoin (Core), the Dogecoin reference client
 has been rebranded as "Dogecoin Core". This helps separate its identity
 from Dogecoin (the network).
 
-luckycoin-cli
+bbqcoin-cli
 ------------
 
-Where previously commands were sent to luckycoind by running
-"luckycoind <command>", 1.7 adopts the model from Bitcoin Core 0.9 where there is
-a separate "luckycoin-cli" executable which is used instead. This avoids the risk
+Where previously commands were sent to bbqcoind by running
+"bbqcoind <command>", 1.7 adopts the model from Bitcoin Core 0.9 where there is
+a separate "bbqcoin-cli" executable which is used instead. This avoids the risk
 of accidentally trying to start two daemons at the same time, for example.
 
 

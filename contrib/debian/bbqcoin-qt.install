@@ -1,0 +1,6 @@
+usr/local/bin/bbqcoin-qt usr/bin
+share/pixmaps/bbqcoin32.xpm usr/share/pixmaps
+share/pixmaps/bbqcoin16.xpm usr/share/pixmaps
+share/pixmaps/bbqcoin128.png usr/share/pixmaps
+debian/bbqcoin-qt.desktop usr/share/applications
+debian/bbqcoin-qt.protocol usr/share/kde4/services/

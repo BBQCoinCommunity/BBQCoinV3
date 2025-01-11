@@ -26,14 +26,14 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 ## Build Dogecoin Core
 
-1.  Clone the luckycoin source code and cd into `luckycoin`
+1.  Clone the bbqcoin source code and cd into `bbqcoin`
 
-        git clone https://github.com/LuckyCoinProj/luckycoinV3
-        cd luckycoin
+        git clone https://github.com/BBQCoin-Community/BBQCoin
+        cd bbqcoin
 
-2.  Build LuckyCoin:
+2.  Build BBQCoin:
 
-    Configure and build the headless luckycoin binaries as well as the GUI (if Qt is found).
+    Configure and build the headless bbqcoin binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -51,36 +51,36 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 ## Running
 
-Dogecoin Core is now available at `./src/luckycoind`
+Dogecoin Core is now available at `./src/bbqcoind`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=dogecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/LuckyCoin/luckycoin.conf"
+    echo -e "rpcuser=dogecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/BBQCoin/bbqcoin.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/LuckyCoin/luckycoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/BBQCoin/bbqcoin.conf"
 
-The first time you run luckycoind, it will start downloading the blockchain. This process could take several hours.
+The first time you run bbqcoind, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/LuckyCoin/debug.log
+    tail -f $HOME/Library/Application\ Support/BBQCoin/debug.log
 
 ## Other commands:
 
-    ./src/luckycoind -daemon # Starts the luckycoin daemon.
-    ./src/luckycoin-cli --help # Outputs a list of command-line options.
-    ./src/luckycoin-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/bbqcoind -daemon # Starts the bbqcoin daemon.
+    ./src/bbqcoin-cli --help # Outputs a list of command-line options.
+    ./src/bbqcoin-cli help # Outputs a list of RPC commands when the daemon is running.
 
 ## Using Qt Creator as IDE
 
-You can use Qt Creator as an IDE, for luckycoin development.
+You can use Qt Creator as an IDE, for bbqcoin development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "luckycoin-qt" as project name, enter src/qt as location
+4. Enter "bbqcoin-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -92,4 +92,4 @@ Uncheck everything except Qt Creator during the installation process.
 
 - Tested on OS X 10.8 through 10.12 on 64-bit Intel processors only.
 
-- Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/luckycoin/luckycoin/issues/7714)
+- Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/bbqcoin/bbqcoin/issues/7714)

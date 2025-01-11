@@ -104,8 +104,8 @@ namespace boost {
 
 using namespace std;
 
-const char * const BITCOIN_CONF_FILENAME = "luckycoin.conf";
-const char * const BITCOIN_PID_FILENAME = "luckycoind.pid";
+const char * const BITCOIN_CONF_FILENAME = "bbqcoin.conf";
+const char * const BITCOIN_PID_FILENAME = "bbqcoind.pid";
 
 CCriticalSection cs_args;
 map<string, string> mapArgs;
@@ -506,7 +506,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "luckycoin";
+    const char* pszModule = "bbqcoin";
 #endif
     if (pex)
         return strprintf(
@@ -532,7 +532,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "LuckyCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "BBQCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -542,10 +542,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/LuckyCoin";
+    return pathRet / "Library/Application Support/BBQCoin";
 #else
     // Unix
-    return pathRet / ".luckycoin";
+    return pathRet / ".bbqcoin";
 #endif
 #endif
 }

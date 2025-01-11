@@ -1,19 +1,19 @@
 Dogecoin Core version 1.14.3 is now available from:
 
-  <https://github.com/luckycoin/luckycoin/releases/tag/v1.14.3/>
+  <https://github.com/bbqcoin/bbqcoin/releases/tag/v1.14.3/>
 
 This is a new minor version release, including various bugfixes and performance improvements. It is a recommended
 update for all users.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/luckycoin/luckycoin/issues>
+  <https://github.com/bbqcoin/bbqcoin/issues>
 
 To receive security and update notifications, please watch reddit or Twitter:
 
-  * https://www.reddit.com/r/luckycoin/
+  * https://www.reddit.com/r/bbqcoin/
   * @Dogecoin on Twitter for high priority announcements
-  * @luckycoin\_devs on Twitter for updates on development work
+  * @bbqcoin\_devs on Twitter for updates on development work
 
 The developers also maintain personal Twitter accounts:
 
@@ -77,7 +77,7 @@ Minor changes
 
 * Set BIP65 softfork heights in chainparams.cpp.
 * Update package links for OSX cross compilation.
-* Change IPC prefix from `bitcoin:` to `luckycoin:`.
+* Change IPC prefix from `bitcoin:` to `bbqcoin:`.
 * Locale independent sorting.
 * Corrections to Italian translation.
 * Refresh main and test network checkpoints and seeds.

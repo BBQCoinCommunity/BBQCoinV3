@@ -194,7 +194,7 @@ void Shutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("luckycoin-shutoff");
+    RenameThread("bbqcoin-shutoff");
     mempool.AddTransactionsUpdated(1);
 
     StopHTTPRPC();
@@ -512,8 +512,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/LuckyCoinProj/luckycoinV3>";
-    const std::string URL_WEBSITE = "<https://github.com/LuckyCoinProj/luckycoinV3>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/BBQCoin-Community/BBQCoin>";
+    const std::string URL_WEBSITE = "<https://github.com/BBQCoin-Community/BBQCoin>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2013, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -617,7 +617,7 @@ void CleanupBlockRevFiles()
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
     const CChainParams& chainparams = Params();
-    RenameThread("luckycoin-loadblk");
+    RenameThread("bbqcoin-loadblk");
 
     {
     CImportingNow imp;
@@ -795,7 +795,7 @@ void InitLogging()
     fLogIPs = GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("LuckyCoin version %s\n", FormatFullVersion());
+    LogPrintf("BBQCoin version %s\n", FormatFullVersion());
 }
 
 namespace { // Variables internal to initialization process only
@@ -1679,7 +1679,7 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // ********************************************************* Step 12: finished
 
-    // luckycoin: Do we need to do any RPC mining init here?
+    // bbqcoin: Do we need to do any RPC mining init here?
 
     SetRPCWarmupFinished();
     uiInterface.InitMessage(_("Done loading"));

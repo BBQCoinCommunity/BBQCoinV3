@@ -1,0 +1,33 @@
+# /etc/conf.d/bbqcoind: config file for /etc/init.d/bbqcoind
+
+# Config file location
+#bbqcoind_CONFIGFILE="/etc/bbqcoin/bbqcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $bbqcoind_USER)
+#bbqcoind_PIDDIR="/var/run/bbqcoind"
+
+# What filename to give the pidfile
+#bbqcoind_PIDFILE="${bbqcoind_PIDDIR}/bbqcoind.pid"
+
+# Where to write bbqcoind data (be mindful that the blockchain is large)
+#bbqcoind_DATADIR="/var/lib/bbqcoind"
+
+# User and group to own bbqcoind process
+#bbqcoind_USER="bbqcoin"
+#bbqcoind_GROUP="bbqcoin"
+
+# Path to bbqcoind executable
+#bbqcoind_BIN="/usr/bin/bbqcoind"
+
+# Nice value to run bbqcoind under
+#bbqcoind_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+bbqcoind_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for bbqcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+bbqcoind_SIGTERM_TIMEOUT=60

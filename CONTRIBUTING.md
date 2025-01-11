@@ -1,16 +1,16 @@
-# Contributing to LuckyCoin Core
+# Contributing to BBQCoin Core
 
-LuckyCoin Core is open source software, and we would welcome contributions
+BBQCoin Core is open source software, and we would welcome contributions
 which improve the state of the software. For those wanting to discuss changes,
 or look for work that needs doing, please see:
 
-- [Help requests](https://github.com/LuckyCoinProj/luckycoinV3/labels/help%20wanted)
-- [Projects](https://github.com/LuckyCoinProj/luckycoinV3/projects)
-- [luckycoindev on reddit](https://www.reddit.com/r/luckycoindev/)
+- [Help requests](https://github.com/BBQCoin-Community/BBQCoin/labels/help%20wanted)
+- [Projects](https://github.com/BBQCoin-Community/BBQCoin/projects)
+- [bbqcoindev on reddit](https://www.reddit.com/r/bbqcoindev/)
 
 ## Branch Strategy
 
-LuckyCoin Core's default branch is intentionally a stable release, so that anyone
+BBQCoin Core's default branch is intentionally a stable release, so that anyone
 downloading the code and compiling it gets a stable release. Active development
 occurs on branches named after the version they are targeting, for example the
 1.14.4 branch is named `1.14.4-dev`. When raising PRs, please raise against the
@@ -98,7 +98,7 @@ in the future, they may be removed.
 
 ### Refactoring
 
-LuckyCoin Core is a direct fork of Bitcoin Core and therefore benefits from as
+BBQCoin Core is a direct fork of Bitcoin Core and therefore benefits from as
 little refactoring as possible on code that is created upstream. If you see any
 structural issues with upstream code, please propose these fixes for
 [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin) and future Dogecoin Core

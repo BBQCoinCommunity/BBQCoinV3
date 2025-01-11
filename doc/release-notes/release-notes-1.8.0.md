@@ -25,7 +25,7 @@ menu. Ensure your existing wallet software is closed before upgrading.
 Note that a full reindex is required as part of the upgrade to 1.8, and this
 will typically take around an hour to complete. If you are running the Qt client
 you will be prompted to reindex when first running the software, while if you
-use "luckycoind" you must run it the first time with the "-reindex" command line
+use "bbqcoind" you must run it the first time with the "-reindex" command line
 option.
 
 To ensure a smooth switchover to AuxPoW, 1.8 has safe mode disabled 1 hour before
@@ -62,7 +62,7 @@ Dogecoin Core 1.8 adds payment protocol support, which is used to streamline pay
 being made to merchants.
 
 This protocol is defined in DIP0070-DIP0072, based on the BIP standards with the same
-assigned numbers. DIP standards can be found at https://github.com/luckycoin/dips/ .
+assigned numbers. DIP standards can be found at https://github.com/bbqcoin/dips/ .
 The key differencs between the Bitcoin and Dogecoin payment protocols are that
 the Dogecoin payment request uses a "genesis" field containing the hash of the network's
 genesis block to identify networks instead of the "network" field. Further, MIME types
@@ -95,5 +95,5 @@ disposed of in all cases.
 Tweaked trigger conditions for safe mode to take into account the much faster block time
 of Dogecoin compared to Bitcoin. This should lead to less false positives.
 
-A problem in parsing mangled luckycoin: URIs under Windows has been resolved, and as
-part of this work network detection for luckycoin: URIs is now more robust.
+A problem in parsing mangled bbqcoin: URIs under Windows has been resolved, and as
+part of this work network detection for bbqcoin: URIs is now more robust.

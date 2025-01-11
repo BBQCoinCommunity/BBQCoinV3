@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=BBQCoin Core
+Comment=Connect to the BBQCoin P2P Network
+Comment[de]=Verbinde mit dem BBQCoin peer-to-peer Netzwerk
+Comment[fr]=BBQCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BBQCoin, eşten eşe kriptografik sanal para birimi
+Exec=bbqcoin-qt %u
+Terminal=false
+Type=Application
+Icon=bbqcoin128
+MimeType=x-scheme-handler/bbqcoin;
+Categories=Office;Finance;
