@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://bbqcoin.link/img/core-img/logo.png" alt="BBQCoin" width="300"/>
+<img src="https://bbqcoin.link/img/core-img/logo.png" alt="BBQCoin" width="75"/>
 <br/><br/>
 BBQCoin Core [BQC]
 </h1>
