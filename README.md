@@ -1,54 +1,50 @@
 <h1 align="center">
-<img src="https://pbs.twimg.com/media/GZhUfpHWwA8P4B_?format=png&name=small" data-canonical-src="https://pbs.twimg.com/media/GZhUfpHWwA8P4B_?format=png&name=small" width="250" height="250" alt="BBQCoin"/>
+<img src="https://bbqcoin.link/img/core-img/logo.png" alt="BBQCoin" width="300"/>
 <br/><br/>
-BBQCoin [BQC]
+BBQCoin Core [BQC]
 </h1>
 
-<div align="center">
+BBQCoin (BQC) is a community-driven cryptocurrency with a rich history dating back to its launch on July 14, 2012. The BBQCoin Core software allows anyone to operate a node in the BBQCoin blockchain networks and uses the Scrypt hashing method for Proof of Work.
 
-[![BBQCoinBadge](https://img.shields.io/badge/BBQCoin-Coin-blue)](https://bbqcoin.link)
-[![MuchWow](https://img.shields.io/badge/OG-Coin-yellow.svg)](https://bbqcoin.link)
+**Website:** [bbqcoin.link](https://bbqcoin.link)
 
-</div>
+## Usage 💻
 
-## What's New in V3.0.0?
-This release is an update aimed at modernizing the BBQCoin blockchain with AuxPow support for merged mining.
+To start your journey with BBQCoin Core, see the [installation guide](INSTALL.md) and the [getting started](doc/getting-started.md) tutorial.
 
-## Features
-- **AuxPow Support**: Enables merged mining with other compatible blockchains.
-- **Updated Dependencies**: Incorporates updates to critical libraries for improved performance and compatibility.
-- **Optimized Performance**: Various improvements for better stability and efficiency.
+The JSON-RPC API provided by BBQCoin Core is self-documenting and can be browsed with `bbqcoin-cli help`, while detailed information for each command can be viewed with `bbqcoin-cli help <command>`.
 
-## Technical Specifications
-- **Block Time**: 1 minute target
-- **Initial Reward**: 88 coins per block, halving every 2 months (100,000 blocks)
-- **Total Supply**: ~20 million coins
-- **Port**: 19323 (connection), 59332 (RPC)
-- **Random Bonus Blocks**: Variable reward system as detailed below.
+### Such ports
 
-### Random Bonus Blocks
-**First 50,000 Blocks (Initial Month)**:
-- 5% chance of 188 coins/block
-- 1% chance of 588 coins/block
-- 0.01% chance of 5,888 coins/block (approximately 5 occurrences ected)
+BBQCoin Core by default uses port `19323` for peer-to-peer communication that
+is needed to synchronize the "mainnet" blockchain and stay informed of new
+transactions and blocks. Additionally, a JSONRPC port can be opened, which
+defaults to port `19332` for mainnet nodes. It is strongly recommended to not
+expose RPC ports to the public internet.
 
-**Post 50,000 Blocks**:
-- 5% chance of 2x normal coins
-- 1% chance of 5x normal coins
-- 0.01% chance of 58x normal coins
+| Function | mainnet | 
+| :------- | ------: |
+| P2P      |   19323 |
+| RPC      |   19332 |
 
-## Official Resources
-Visit the [BBQCoin website](https://bbqcoin.link) for more details, updates, and community engagement.
+## Ongoing development
 
-## Development Process
-Developers should work on their own branches and submit pull requests when features or fixes are ready. The master branch is tested regularly but is not guaranteed to be stable. Feature branches are used for significant updates involving multiple contributors.
+BBQCoin Core is an open source and community driven software. The development
+process is open and publicly visible; anyone can see, discuss and work on the
+software.
 
-### Guidelines:
-- Expect review and rework if necessary.
-- Pull requests may be closed after 15 days of inactivity, marked as 'stagnant'.
+## Communities
 
-## Contribution
-Contributions are welcomed. Ensure that your pull requests adhere to project standards and are thoroughly tested.
+You can join the communities on different social media.
+To see what's going on, meet people & discuss, find the latest meme, learn
+about BBQCoin, give or ask for help, to share your project.
+
+Here are some places to visit:
+
+* [Discord](https://discord.gg/7cKdR4ynW9)
+* [Twitter](https://x.com/bbqcoin_bqc2012)
 
 ## License
-Released under the MIT License. See `COPYING` for more information.
+BBQCoin Core is released under the terms of the MIT license. See
+[COPYING](COPYING) for more information or see
+[opensource.org](https://opensource.org/licenses/MIT)
