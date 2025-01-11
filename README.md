@@ -18,13 +18,13 @@ The JSON-RPC API provided by BBQCoin Core is self-documenting and can be browsed
 BBQCoin Core by default uses port `19323` for peer-to-peer communication that
 is needed to synchronize the "mainnet" blockchain and stay informed of new
 transactions and blocks. Additionally, a JSONRPC port can be opened, which
-defaults to port `19332` for mainnet nodes. It is strongly recommended to not
+defaults to port `59332` for mainnet nodes. It is strongly recommended to not
 expose RPC ports to the public internet.
 
 | Function | mainnet | 
 | :------- | ------: |
 | P2P      |   19323 |
-| RPC      |   19332 |
+| RPC      |   59332 |
 
 ## Ongoing development
 
