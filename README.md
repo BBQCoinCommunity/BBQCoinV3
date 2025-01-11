@@ -1,7 +1,6 @@
 <h1 align="center">
 <img src="https://bbqcoin.link/img/core-img/logo.png" alt="BBQCoin" width="75"/>
-<br/><br/>
-BBQCoin Core [BQC]
+<br/>BBQCoin Core [BQC]
 </h1>
 
 BBQCoin (BQC) is a community-driven cryptocurrency with a rich history dating back to its launch on July 14, 2012. The BBQCoin Core software allows anyone to operate a node in the BBQCoin blockchain networks and uses the Scrypt hashing method for Proof of Work.
