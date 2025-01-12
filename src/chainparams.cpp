@@ -129,7 +129,7 @@ public:
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x4B74;
-        consensus.nAuxpowStartHeight = 540000;
+        consensus.nAuxpowStartHeight = 550000;
         consensus.nBlockAfterAuxpowRewardThreshold = 5;
         consensus.fStrictChainId = true;
 
