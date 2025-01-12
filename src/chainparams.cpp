@@ -183,7 +183,9 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x88f28daf21ef9f2f9c40fbeb2860b1e06d169b986e1ecc703fcaba74e2ac1825"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "dnsseed.bbqcoin.link", true));
+        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "seed01.bbqcoin.link", true));
+        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "seed02.bbqcoin.link"));
+        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "seed03.bbqcoin.link"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,85);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,6);
@@ -334,7 +336,10 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x7c517f40f1bb4d60c23e8fe6ea57ec2e285ff076aab372e0e801640329d6f9d5"));
         assert(genesis.hashMerkleRoot == uint256S("0x88f28daf21ef9f2f9c40fbeb2860b1e06d169b986e1ecc703fcaba74e2ac1825"));
 
-        // nodes with support for servicebits filtering should be at the top
+        // Note that of those with the service bits flag, most only support a subset of possible options
+        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "testnet.seed01.bbqcoin.link", true));
+        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "testnet.seed02.bbqcoin.link"));
+        vSeeds.push_back(CDNSSeedData("bbqcoin.link", "testnet.seed03.bbqcoin.link"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,76);
