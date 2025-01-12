@@ -257,7 +257,7 @@ public:
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x4B75;
-        consensus.nAuxpowStartHeight = 100; // -1 will always allow legacy blocks
+        consensus.nAuxpowStartHeight = 50; // -1 will always allow legacy blocks
         consensus.nBlockAfterAuxpowRewardThreshold = 5;
         consensus.fStrictChainId = true;
 
