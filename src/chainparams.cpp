@@ -125,10 +125,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = -2;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000006863fa6e0fb5baf6");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x32e21aeb3780622102419fbda3a5f9d6c8d81d52e3d1b6cdad8a8e92f50415ec");
+        consensus.defaultAssumeValid = uint256S("0xa5a6d8eb35207fe4cc0fcc7384545ff50defbebbee4919621b7770def2208ae0");
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x4B74;
@@ -201,15 +201,24 @@ public:
         checkpointData = (CCheckpointData) {
                 boost::assign::map_list_of
                         (      0, uint256S("0x32e21aeb3780622102419fbda3a5f9d6c8d81d52e3d1b6cdad8a8e92f50415ec"))
+                        (      1, uint256S("0x65a7f2baaefd3e45d6f355fee028d0e1012b9639bfaf21d8db4ee81a86df41aa"))
+                        (      11, uint256S("0x80af4ee725bce12579711cf9ecd85702bd1e58a5e3385d2ea6e01976e1dbcc64"))
+                        (      1004, uint256S("0x6753ce7805e8709ebfd8b378c0014a9b47c0eb2bccf49b8ee091c490e88af0a1"))
+                        (      10378, uint256S("0x7609b82dd55a386cb36507f986f69b8ec78ae736b9e2104b144232fa6122e1e2"))
+                        (      357441, uint256S("0xff53ca296d072a40b280ce0491dd1d1adefde94b6966bba17ccb793a7fd8b738"))
+                        (      412163, uint256S("0x2f489863dd899e514666d880dca5d6227d7878e13f8158ef7cad1c839f197016"))
+                        (      490842, uint256S("0xc28e7baff62cd538cf3db6c770f09738f63e1617948fbaad6d124e61ca3295d7"))
+                        (      490888, uint256S("0xc89411db40a1ec54fbaab0d14de11209e94a956a03bf79ae7125a6fa8ef3aa76"))
+                        (      529500, uint256S("0xa5a6d8eb35207fe4cc0fcc7384545ff50defbebbee4919621b7770def2208ae0"))
         };
 
         chainTxData = ChainTxData{
-                // Data as of block 0x32e21aeb3780622102419fbda3a5f9d6c8d81d52e3d1b6cdad8a8e92f50415ec (height 0).
+                // Data as of block a5a6d8eb35207fe4cc0fcc7384545ff50defbebbee4919621b7770def2208ae0 (height 529500).
                 // Tx estimate based on average between 2021-07-01 (3793538) and 2022-07-01 (4288126)
-                1317972665, // * UNIX timestamp of last checkpoint block
-                0,   // * total number of transactions between genesis and last checkpoint
+                1736684109, // * UNIX timestamp of last checkpoint block
+                625480,   // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-                0        // * estimated number of transactions per second after checkpoint
+                1.00        // * estimated number of transactions per second after checkpoint
         };
     }
 };
