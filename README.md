@@ -26,6 +26,13 @@ expose RPC ports to the public internet.
 | P2P      |   19323 |   19333 |
 | RPC      |   59332 |   19332 |
 
+## NODES:
+```
+addnode=seed01.bbqcoin.link
+addnode=seed02.bbqcoin.link
+addnode=seed03.bbqcoin.link
+```
+
 ## Ongoing development
 
 BBQCoin Core is an open source and community driven software. The development
@@ -39,9 +46,15 @@ To see what's going on, meet people & discuss, find the latest meme, learn
 about BBQCoin, give or ask for help, to share your project.
 
 Here are some places to visit:
-
-* [Discord](https://discord.gg/7cKdR4ynW9)
+* [Website](https://bbqcoin.network)
+* [Discord](https://discord.gg/sXFFEhNhM6)
 * [Twitter](https://x.com/bbqcoin_bqc2012)
+* [Telegram](https://t.me/BBQCOIN2012)
+* [Medium](https://medium.com/@bbqcoin2012)
+* [Explorer 1](https://chainz.cryptoid.info/bqc/)
+* [Explorer 2](https://bbqcoin.network/)
+* [Bitcointalk](https://bitcointalk.org/index.php?topic=93437.0)
+* [NonKCY Exchange](https://nonkyc.io/market/BQC_USDT)
 
 ## License
 BBQCoin Core is released under the terms of the MIT license. See
