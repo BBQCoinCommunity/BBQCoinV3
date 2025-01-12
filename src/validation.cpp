@@ -1892,10 +1892,10 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     CBlockIndex *pindexBIP34height = pindex->pprev->GetAncestor(chainparams.GetConsensus(0).BIP34Height);
     //Only continue to enforce if we're below BIP34 activation height or the block hash at that height doesn't correspond.
     
-    //fEnforceBIP30 = fEnforceBIP30 && (!pindexBIP34height); // || !(pindexBIP34height->GetBlockHash() == chainparams.GetConsensus(0).BIP34Hash)
+    fEnforceBIP30 = fEnforceBIP30 && (!pindexBIP34height); // || !(pindexBIP34height->GetBlockHash() == chainparams.GetConsensus(0).BIP34Hash)
     
     ThresholdState stateBip34 = VersionBitsState(pindex->pprev, consensus, Consensus::DEPLOYMENT_BIP34, versionbitscache);
-    fEnforceBIP30 = fEnforceBIP30 && (stateBip34 == THRESHOLD_ACTIVE || stateBip34 == THRESHOLD_STARTED);
+    //fEnforceBIP30 = fEnforceBIP30 && (stateBip34 == THRESHOLD_ACTIVE || stateBip34 == THRESHOLD_STARTED);
     // we do not know the target hash just yet.
 
     if(!fEnforceBIP30) {
@@ -1926,20 +1926,21 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
 
     // Start enforcing the DERSIG (BIP66) rule
-    // if (pindex->nHeight >= chainparams.GetConsensus(0).BIP66Height) {
-    if (stateBip66 == THRESHOLD_ACTIVE || stateBip66 == THRESHOLD_STARTED) {
+    if (pindex->nHeight >= chainparams.GetConsensus(0).BIP66Height) {
+    //if (stateBip66 == THRESHOLD_ACTIVE || stateBip66 == THRESHOLD_STARTED) {
         flags |= SCRIPT_VERIFY_DERSIG;
     }
 
     // Start enforcing CHECKLOCKTIMEVERIFY, (BIP65) for block.nVersion=4 blocks
-    // if (pindex->nHeight >= chainparams.GetConsensus(0).BIP65Height) {
-    if (stateBip65 == THRESHOLD_ACTIVE || stateBip65 == THRESHOLD_STARTED) {
+    if (pindex->nHeight >= chainparams.GetConsensus(0).BIP65Height) {
+    //if (stateBip65 == THRESHOLD_ACTIVE || stateBip65 == THRESHOLD_STARTED) {
         flags |= SCRIPT_VERIFY_CHECKLOCKTIMEVERIFY;
     }
 
     // Start enforcing BIP68 (sequence locks) and BIP112 (CHECKSEQUENCEVERIFY) using versionbits logic.
     int nLockTimeFlags = 0;
-    if (VersionBitsState(pindex->pprev, consensus, Consensus::DEPLOYMENT_CSV, versionbitscache) == THRESHOLD_ACTIVE) {
+    if (pindex->nHeight >= chainparams.GetConsensus(0).CSVHeight) {
+    //if (VersionBitsState(pindex->pprev, consensus, Consensus::DEPLOYMENT_CSV, versionbitscache) == THRESHOLD_ACTIVE) {
         flags |= SCRIPT_VERIFY_CHECKSEQUENCEVERIFY;
         nLockTimeFlags |= LOCKTIME_VERIFY_SEQUENCE;
     }
@@ -3137,12 +3138,13 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     ThresholdState stateBip65 = VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_BIP65, versionbitscache);
     ThresholdState stateBip66 = VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_BIP66, versionbitscache);
 
-    // if((block.GetBaseVersion() < 3 && nHeight >= consensusParams.BIP66Height) ||
-    //    (block.GetBaseVersion() < 4 && nHeight >= consensusParams.BIP65Height))
+     if((block.GetBaseVersion() < 2 && nHeight >= consensusParams.BIP34Height) ||
+        (block.GetBaseVersion() < 3 && nHeight >= consensusParams.BIP65Height) ||
+        (block.GetBaseVersion() < 4 && nHeight >= consensusParams.BIP66Height))
 
-    if((block.GetBaseVersion() < 2 && (stateBip34 == THRESHOLD_ACTIVE && stateBip34 == THRESHOLD_LOCKED_IN) ||
-        block.GetBaseVersion() < 3 && (stateBip66 == THRESHOLD_ACTIVE && stateBip65 == THRESHOLD_LOCKED_IN) ||
-        (block.GetBaseVersion() < 4 && (stateBip65 == THRESHOLD_ACTIVE && stateBip66 == THRESHOLD_LOCKED_IN)))) 
+    //if((block.GetBaseVersion() < 2 && (stateBip34 == THRESHOLD_ACTIVE && stateBip34 == THRESHOLD_LOCKED_IN) ||
+    //    block.GetBaseVersion() < 3 && (stateBip66 == THRESHOLD_ACTIVE && stateBip65 == THRESHOLD_LOCKED_IN) ||
+    //    (block.GetBaseVersion() < 4 && (stateBip65 == THRESHOLD_ACTIVE && stateBip66 == THRESHOLD_LOCKED_IN)))) 
     {
             return state.Invalid(false, REJECT_OBSOLETE, strprintf("bad-version(0x%08x)", block.GetBaseVersion()),
                                  strprintf("rejected nVersion=0x%08x block", block.GetBaseVersion()));
@@ -3159,7 +3161,8 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, const CB
 
     // Start enforcing BIP113 (Median Time Past) using versionbits logic.
     int nLockTimeFlags = 0;
-    if (VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_CSV, versionbitscache) == THRESHOLD_ACTIVE) {
+    if (nHeight >= consensusParams.CSVHeight) {
+    //if (VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_CSV, versionbitscache) == THRESHOLD_ACTIVE) {
         nLockTimeFlags |= LOCKTIME_MEDIAN_TIME_PAST;
     }
 
@@ -3176,8 +3179,8 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, const CB
 
     // Enforce rule that the coinbase starts with serialized block height
     ThresholdState stateBip34 = VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_BIP34, versionbitscache);
-    // if (nHeight >= consensusParams.BIP34Height)
-    if (stateBip34 == THRESHOLD_ACTIVE || stateBip34 == THRESHOLD_STARTED)
+     if (nHeight >= consensusParams.BIP34Height)
+    //if (stateBip34 == THRESHOLD_ACTIVE || stateBip34 == THRESHOLD_STARTED)
     {
         CScript expect = CScript() << nHeight;
         if (block.vtx[0]->vin[0].scriptSig.size() < expect.size() ||

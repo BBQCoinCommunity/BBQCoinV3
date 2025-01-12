@@ -1404,16 +1404,19 @@ static UniValue SoftForkMajorityDesc(int version, CBlockIndex* pindex, const Con
     switch(version)
     {
         case 2:
-            activated = (VersionBitsState(pindex->pprev, consensusParams, Consensus::DEPLOYMENT_BIP34, versionbitscache) == THRESHOLD_ACTIVE);
-            // activated = pindex->nHeight >= consensusParams.BIP34Height;
+            // activated = (VersionBitsState(pindex->pprev, consensusParams, Consensus::DEPLOYMENT_BIP34, versionbitscache) == THRESHOLD_ACTIVE);
+            activated = pindex->nHeight >= consensusParams.BIP34Height;
             break;
         case 3:
-            activated = (VersionBitsState(pindex->pprev, consensusParams, Consensus::DEPLOYMENT_BIP66, versionbitscache) == THRESHOLD_ACTIVE);
-            // activated = pindex->nHeight >= consensusParams.BIP66Height;
+            // activated = (VersionBitsState(pindex->pprev, consensusParams, Consensus::DEPLOYMENT_BIP66, versionbitscache) == THRESHOLD_ACTIVE);
+            activated = pindex->nHeight >= consensusParams.BIP66Height;
             break;
         case 4:
-            activated = (VersionBitsState(pindex->pprev, consensusParams, Consensus::DEPLOYMENT_BIP65, versionbitscache) == THRESHOLD_ACTIVE);
-            // activated = pindex->nHeight >= consensusParams.BIP65Height;
+            // activated = (VersionBitsState(pindex->pprev, consensusParams, Consensus::DEPLOYMENT_BIP65, versionbitscache) == THRESHOLD_ACTIVE);
+            activated = pindex->nHeight >= consensusParams.BIP65Height;
+            break;
+        case 5:
+            activated = pindex->nHeight >= consensusParams.CSVHeight;
             break;
     }
     rv.pushKV("status", activated);
@@ -1543,8 +1546,9 @@ UniValue getblockchaininfo(const JSONRPCRequest& request)
     softforks.push_back(SoftForkDesc("bip34", 2, tip, consensusParams));
     softforks.push_back(SoftForkDesc("bip66", 3, tip, consensusParams));
     softforks.push_back(SoftForkDesc("bip65", 4, tip, consensusParams));
-    BIP9SoftForkDescPushBack(bip9_softforks, "csv", consensusParams, Consensus::DEPLOYMENT_CSV);
-    BIP9SoftForkDescPushBack(bip9_softforks, "segwit", consensusParams, Consensus::DEPLOYMENT_SEGWIT);
+    softforks.push_back(SoftForkDesc("csv", 5, tip, consensusParams));
+    //BIP9SoftForkDescPushBack(bip9_softforks, "csv", consensusParams, Consensus::DEPLOYMENT_CSV);
+    //BIP9SoftForkDescPushBack(bip9_softforks, "segwit", consensusParams, Consensus::DEPLOYMENT_SEGWIT);
     obj.pushKV("softforks",             softforks);
     obj.pushKV("bip9_softforks", bip9_softforks);
     obj.pushKV("warnings", GetWarnings("statusbar"));

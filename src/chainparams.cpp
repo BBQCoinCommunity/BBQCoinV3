@@ -81,9 +81,11 @@ public:
         consensus.nMajorityWindow = 4320;
 
         // After deployments are activated we can change it
-        consensus.BIP34Hash = uint256();
-        consensus.BIP65Height = 540000;
-        consensus.BIP66Height = 540000;
+        consensus.BIP34Hash = uint256S("0x00");
+        consensus.BIP34Height = 547000;
+        consensus.BIP65Height = 547000;
+        consensus.BIP66Height = 547000;
+        consensus.CSVHeight = 547000;
 
         consensus.powLimit = uint256S("0x07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 60 * 60;
@@ -97,24 +99,6 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = -2;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = -2;
-
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].nStartTime = 1737000000;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].nTimeout   = 1738000000;
-
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP66].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP66].nStartTime = 1737000000;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP66].nTimeout   = 1738000000;
-
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP65].bit = 2;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP65].nStartTime = 1737000000;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP65].nTimeout   = 1738000000;
-
-        // Deployment of BIP68, BIP112, and BIP113.
-        // XXX: BIP heights and hashes all need to be updated to BBQCoin values
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 3;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1737000000;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1764490155;
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 4;
@@ -241,11 +225,11 @@ public:
         consensus.nMajorityWindow = 4320;
 
         // After deployments are activated we can change it
-        consensus.BIP34Hash = uint256S("0x00"); // unused for now.
-        consensus.BIP65Height = 99999999;
-        consensus.BIP65Height = 99999999;
-        consensus.BIP66Height = 99999999;
-
+        consensus.BIP34Hash = uint256S("0x00");
+        consensus.BIP34Height = 5;
+        consensus.BIP65Height = 5;
+        consensus.BIP66Height = 5;
+        consensus.CSVHeight = 5;
 
         consensus.powLimit = uint256S("0x07ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 60 * 60;
@@ -257,33 +241,13 @@ public:
         consensus.nMinerConfirmationWindow = 4320;
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = -2; //disabled for now
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = -2; //disabled for now
-
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].nStartTime = -2; //disabled for now
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].nTimeout   = -2; //disabled for now
-
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP66].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP66].nStartTime = -2; //disabled for now
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP66].nTimeout   = -2; //disabled for now
-
-
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP65].bit = 2;
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP65].nStartTime = -2; //disabled for now
-        consensus.vDeployments[Consensus::DEPLOYMENT_BIP65].nTimeout   = -2; //disabled for now
-
-
-        // Deployment of BIP68, BIP112, and BIP113.
-        // XXX: BIP heights and hashes all need to be updated to BBQCoin values
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 3;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = -2; //disabled for now
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = -2; //disabled for now
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = -2;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = -2;
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 4;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = -2; //disabled for now
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = -2; //disabled for now
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = -2;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = -2;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
