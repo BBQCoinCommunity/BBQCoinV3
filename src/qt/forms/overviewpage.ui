@@ -430,7 +430,8 @@
          <property name="spacing">
           <number>0</number>
          </property>
-         <item row="0" column="0">
+
+         <item row="1" column="0">
           <widget class="QLabel" name="label_wallet_bgcoin">
            <property name="minimumSize">
             <size>
@@ -460,6 +461,19 @@
             <number>0</number>
            </property>
           </widget>
+         </item>
+         <item row="2" column="0">
+          <spacer name="verticalSpacer_bottom">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>20</width>
+             <height>60</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>
