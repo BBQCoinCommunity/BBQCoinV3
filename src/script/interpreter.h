@@ -108,6 +108,8 @@ enum
     SCRIPT_VERIFY_WITNESS_PUBKEYTYPE = (1U << 15),
 };
 
+static const uint256 CHAIN_ID = uint256S("0x4B74");
+
 bool CheckSignatureEncoding(const std::vector<unsigned char> &vchSig, unsigned int flags, ScriptError* serror);
 
 struct PrecomputedTransactionData
