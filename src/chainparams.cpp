@@ -95,8 +95,8 @@ public:
         consensus.nMinerConfirmationWindow = 4320;
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1737000000;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1738000000;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = -2;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = -2;
 
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP34].nStartTime = 1737000000;
