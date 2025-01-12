@@ -75,13 +75,10 @@ private:
 public:
     CMainParams() {
         strNetworkID = "main";
-
-        // Not used in BBQCoin
         consensus.nSubsidyHalvingInterval = 2400000;
-
-        consensus.nMajorityEnforceBlockUpgrade = 1500;
-        consensus.nMajorityRejectBlockOutdated = 1900;
-        consensus.nMajorityWindow = 2000;
+        consensus.nMajorityEnforceBlockUpgrade = 3240;
+        consensus.nMajorityRejectBlockOutdated = 3888;
+        consensus.nMajorityWindow = 4320;
 
         // After deployments are activated we can change it
         consensus.BIP34Hash = uint256();
@@ -94,8 +91,8 @@ public:
         consensus.nCoinbaseMaturity = 10;
         consensus.fPowNoRetargeting = false;
 
-        consensus.nRuleChangeActivationThreshold = 9576; // 95% of 10,080
-        consensus.nMinerConfirmationWindow = 10080; // 60 * 24 * 7 = 10,080 blocks, or one week
+        consensus.nRuleChangeActivationThreshold = 4104;
+        consensus.nMinerConfirmationWindow = 4320;
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1737000000;
