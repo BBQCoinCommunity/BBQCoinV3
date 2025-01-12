@@ -1,6 +1,6 @@
 package=zlib
 $(package)_version=1.2.12
-$(package)_download_path=https://www.zlib.net/fossils
+$(package)_download_path=http://www.zlib.net
 $(package)_file_name=$(package)-$($(package)_version).tar.gz
 $(package)_sha256_hash=91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9
 
