@@ -26,12 +26,12 @@ expose RPC ports to the public internet.
 | P2P      |   19323 |   19333 |
 | RPC      |   59332 |   19332 |
 
-## NODES:
-```
-addnode=seed01.bbqcoin.link
-addnode=seed02.bbqcoin.link
-addnode=seed03.bbqcoin.link
-```
+## NODES
+
+| Network  | Node 1                   | Node 2                   | Node 3                   |
+| :------- | :----------------------- | :----------------------- | :----------------------- |
+| Main     | seed01.bbqcoin.link      | seed02.bbqcoin.link      | seed03.bbqcoin.link      |
+| Testnet  | testnet.seed01.bbqcoin.link | testnet.seed02.bbqcoin.link | testnet.seed03.bbqcoin.link |
 
 ## Ongoing development
 
