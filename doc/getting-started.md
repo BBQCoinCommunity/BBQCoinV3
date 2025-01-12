@@ -368,10 +368,10 @@ Authentication is required to interact with the RPC interface. When no credentia
 
 A node can expose 2 different ports: one port for the **Peer to Peer Network** (P2P) to communicate with other nodes, and a second port for access to the RPC API. By default, the ports are configured as follows:
 
-| Function | mainnet | testnet | regtest |
-| :------- | ------: | ------: | ------: |
-| P2P      |   19323 |   44556 |   18444 |
-| RPC      |   59332 |   44555 |   18332 |
+| Function | mainnet | testnet |
+| :------- | ------: | ------: |
+| P2P      |   19323 |   19333 |
+| RPC      |   59332 |   19332 |
 
 To configure them use the `-port` and `-rpcport` parameters.
 
