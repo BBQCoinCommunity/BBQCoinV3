@@ -103,9 +103,11 @@ QString dateTimeStr(qint64 nTime)
 
 QFont fixedPitchFont()
 {
-    QFont font("Cursive");
-    font.setFamily("Comic Sans MS");
-    return font;
+        int id = QFontDatabase::addApplicationFont(":/fonts/infoma");
+        if (id == -1) {
+	    fprintf(stderr, "Failed to load Infoma Light font.\n");
+    	}
+    return QFontDatabase::systemFont(QFontDatabase::FixedFont);
 }
 
 // Just some dummy data to generate an convincing random-looking (but consistent) address

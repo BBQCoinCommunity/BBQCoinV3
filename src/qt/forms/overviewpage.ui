@@ -73,7 +73,7 @@
                </size>
               </property>
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogecoin network after a connection is established, but this process has not completed yet.</string>
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the BBQCoin network after a connection is established, but this process has not completed yet.</string>
               </property>
               <property name="text">
                <string/>
@@ -421,43 +421,92 @@
        </item>
        <item>
         <layout class="QGridLayout" name="logo_grid">
-          <item>
-            <widget class="QLabel" name="label_wallet_bgcoin">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+           <widget class="QLabel" name="label_wallet_bgcoin">
              <property name="text">
-              <string/>
+               <string/>
              </property>
              <property name="pixmap">
-              <pixmap resource="../bitcoin.qrc">:/icons/wallet_bgcoin</pixmap>
+               <pixmap resource="../bitcoin.qrc">:/icons/wallet_bgcoin</pixmap>
              </property>
              <property name="scaledContents">
-              <bool>false</bool>
+               <bool>true</bool> <!-- Enable scaled contents for resizing -->
+             </property>
+             <property name="minimumSize">
+               <size>
+                 <width>200</width> <!-- Set minimum width to half of the original -->
+                 <height>200</height> <!-- Set minimum height to half of the original -->
+               </size>
+             </property>
+             <property name="maximumSize">
+               <size>
+                 <width>200</width> <!-- Ensure maximum size is consistent -->
+                 <height>200</height>
+               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+               <set>Qt::AlignCenter</set>
              </property>
              <property name="margin">
-              <number>-2</number>
+               <number>0</number>
              </property>
-            </widget>
-          </item>
-          <item>
-            <widget class="QLabel" name="label_wallet_version_overlay">
-              <property name="text">
-               <string></string>
-              </property>
-              <property name="pixmap">
-              </property>
-              <property name="scaledContents">
-               <bool>false</bool>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignLeft|Qt::AlignBottom</set>
-              </property>
-              <property name="margin">
-               <number>2</number>
-              </property>
-            </widget>
-          </item>
+           </widget>
+         </item>
+
+         <item row="2" column="0">
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_wallet_version_overlay">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap/>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </item>
       </layout>
@@ -500,7 +549,7 @@
                </size>
               </property>
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogecoin network after a connection is established, but this process has not completed yet.</string>
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the BBQCoin network after a connection is established, but this process has not completed yet.</string>
               </property>
               <property name="text">
                <string/>
@@ -584,6 +633,9 @@
              <bold>true</bold>
             </font>
            </property>
+           <property name="visible">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>Helpful tip of the day:</string>
            </property>
@@ -591,6 +643,9 @@
          </item>
          <item>
           <widget class="QLabel" name="label_tip">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>Tip</string>
            </property>

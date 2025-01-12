@@ -182,7 +182,8 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle *
     QFont::insertSubstitution("Comic Sans MS", "Comic Neue");
 
     // bbqcoin: Specify Comic Sans as new font.
-    QFont newFont("Comic Sans MS", 10);
+
+    QFont newFont("infoma", 10);
 
     // bbqcoin: Set new application font
     QApplication::setFont(newFont);

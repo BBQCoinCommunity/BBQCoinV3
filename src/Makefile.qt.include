@@ -380,7 +380,8 @@ RES_FONTS = \
   qt/res/fonts/ComicNeue-Light-Oblique.ttf \
   qt/res/fonts/ComicNeue-Light.ttf \
   qt/res/fonts/ComicNeue-Regular-Oblique.ttf \
-  qt/res/fonts/ComicNeue-Regular.ttf
+  qt/res/fonts/ComicNeue-Regular.ttf \
+  qt/res/fonts/Infoma-Regular.ttf
 
 BITCOIN_RC = qt/res/bitcoin-qt-res.rc
 

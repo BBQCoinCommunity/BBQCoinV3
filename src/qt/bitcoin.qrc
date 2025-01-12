@@ -102,5 +102,6 @@
         <file alias="ComicNeue-Light-Oblique">res/fonts/ComicNeue-Light-Oblique.ttf</file>
         <file alias="ComicNeue-Regular">res/fonts/ComicNeue-Regular.ttf</file>
         <file alias="ComicNeue-Regular-Oblique">res/fonts/ComicNeue-Regular-Oblique.ttf</file>
+        <file alias="infoma">res/fonts/Infoma-Regular.ttf</file>
     </qresource>
 </RCC>
