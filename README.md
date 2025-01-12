@@ -21,7 +21,7 @@ transactions and blocks. Additionally, a JSONRPC port can be opened, which
 defaults to port `59332` for mainnet nodes. It is strongly recommended to not
 expose RPC ports to the public internet.
 
-| Function | mainnet | testnet |
+| Function | Mainnet | Testnet |
 | :------- | ------: | ------: |
 | P2P      |   19323 |   19333 |
 | RPC      |   59332 |   19332 |
@@ -30,7 +30,7 @@ expose RPC ports to the public internet.
 
 | Network  | Node 1                   | Node 2                   | Node 3                   |
 | :------- | :----------------------- | :----------------------- | :----------------------- |
-| Main     | seed01.bbqcoin.link      | seed02.bbqcoin.link      | seed03.bbqcoin.link      |
+| Mainnet     | seed01.bbqcoin.link      | seed02.bbqcoin.link      | seed03.bbqcoin.link      |
 | Testnet  | testnet.seed01.bbqcoin.link | testnet.seed02.bbqcoin.link | testnet.seed03.bbqcoin.link |
 
 ## Ongoing development
