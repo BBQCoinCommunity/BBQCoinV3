@@ -175,7 +175,7 @@ CAmount GetDogecoinBlockSubsidy(int nHeight, int nFees, const Consensus::Params&
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
 
     if (halvings >= 64) {
-        return 0;
+        return nFees;
     }
 
     if (nHeight == 490845) {

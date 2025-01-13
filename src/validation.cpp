@@ -2031,7 +2031,8 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
     CAmount blockReward = GetDogecoinBlockSubsidy(pindex->nHeight, nFees, chainparams.GetConsensus(pindex->nHeight), hashPrevBlock);
-    if (block.vtx[0]->GetValueOut() > blockReward)
+    std::set<int> exceptionBlocks = {4320, 22541, 22551, 24238, 312090, 362224, 362227, 392887, 392912, 396750, 397606, 401570, 402932, 404484, 405817, 406265, 407133, 407134, 408147, 408148, 408150, 409298, 409338, 409366, 409691, 411140, 411916, 412079, 412238, 412997, 418136, 427723, 428754, 428803, 450524, 455495, 456299, 465745, 465746, 465747, 465748, 469146, 469147, 473281, 473373, 477518, 477685, 477686, 477687, 477748, 477751, 477752, 481233, 481244, 481436, 481439, 481442, 481471, 481472, 490845, 498255};
+    if (exceptionBlocks.count(pindex->nHeight) == 0 && block.vtx[0]->GetValueOut() > blockReward)
         return state.DoS(100,
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",
                                block.vtx[0]->GetValueOut(), blockReward),
